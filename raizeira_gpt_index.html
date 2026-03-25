@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jornada Poder do Espelho</title>
+
+<style>
+:root {
+  --bege: #F5EFE6;
+  --areia: #E8DCCF;
+  --dourado: #C6A96B;
+  --marrom: #6B4F3A;
+  --branco: #FFFFFF;
+  --rosa: #EAD7E1;
+  --violeta: #7D5BA6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: var(--bege);
+  color: var(--marrom);
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              #ccc;
+  color: white;
+  padding: 100px 20px;
+}
+
+.btn {
+  background: var(--dourado);
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  background: var(--marrom);
+  color: white;
+  padding: 20px;
+}
+
+@media(min-width:768px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Você está pronta para se reencontrar com quem você realmente é?</h1>
+    <p>Uma jornada profunda de reconexão com sua essência feminina</p>
+    <a class="btn" href="https://wa.me/5599999999999?text=Quero%20participar%20da%20Jornada" target="_blank">
+      Quero iniciar minha jornada
+    </a>
+  </div>
+</section>
+
+<!-- IDENTIFICAÇÃO -->
+<section>
+  <div class="container">
+    <h2>Talvez você esteja se sentindo assim...</h2>
+    <p>
+      Cansada, desconectada de si mesma, vivendo no automático...<br><br>
+      Sentindo que algo precisa mudar, mas sem saber exatamente o quê.
+    </p>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section style="background: var(--areia);">
+  <div class="container">
+    <h2>O que é a Jornada Poder do Espelho?</h2>
+    <p>
+      Um processo profundo de autoconhecimento onde você aprende a olhar para si com verdade,
+      ressignificar padrões e despertar o seu poder feminino.
+    </p>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section>
+  <div class="container">
+    <h2>O que você vai sentir</h2>
+    <div class="cards">
+      <div class="card">Clareza sobre quem você é</div>
+      <div class="card">Libertação emocional</div>
+      <div class="card">Reconexão com sua essência</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section style="background: var(--areia);">
+  <div class="container">
+    <h2>Como funciona</h2>
+    <div class="cards">
+      <div class="card">1. Reconhecer</div>
+      <div class="card">2. Ressignificar</div>
+      <div class="card">3. Despertar</div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section>
+  <div class="container">
+    <h2>Transformações reais</h2>
+    <div class="cards">
+      <div class="card">
+        "Eu me reencontrei comigo mesma. Foi libertador." – Ana
+      </div>
+      <div class="card">
+        "Hoje me sinto mais forte e confiante." – Juliana
+      </div>
+      <div class="card">
+        "Mudou completamente minha forma de viver." – Carla
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULÁRIO -->
+<section style="background: var(--areia);">
+  <div class="container">
+    <h2>O seu reencontro começa agora</h2>
+
+    <form class="form" onsubmit="redirectWhats(event)">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="tel" id="whatsapp" placeholder="WhatsApp" required pattern="[0-9]{10,11}">
+      <button class="btn" type="submit">Quero participar</button>
+    </form>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© Jornada Poder do Espelho</p>
+</footer>
+
+<script>
+function redirectWhats(e) {
+  e.preventDefault();
+
+  var nome = document.getElementById("nome").value;
+  var whatsapp = document.getElementById("whatsapp").value;
+
+  var mensagem = "Olá, meu nome é " + nome + 
+  " e quero participar da Jornada Poder do Espelho.";
+
+  var url = "https://wa.me/5599999999999?text=" + encodeURIComponent(mensagem);
+
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
